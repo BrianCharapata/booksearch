@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>You Tube Search</title>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+        <link href="index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+      <main role="main"  aria-live="assertive">
+        <div class="container">
+        <h1>Search YouTube Titles</h1>
+        <form action="#" class="js-search-form" aria-live="assertive">
+          <b><label for="query">Enter Search</label></b><br>
+          <input type="text" name="textBox" id="query" class="js-query" required><br>
+          <button type="submit">Search</button>
+        </form>
+          
+        <h2>Results</h2>
+        <div class="js-search-results">
+
+        </div>
+        </div>
+      </main>
+      <script src="index.js"></script>
+    </body>
+</html>

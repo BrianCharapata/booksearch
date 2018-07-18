@@ -1,0 +1,40 @@
+body {
+	padding-top: 50px;
+	text-align: center;
+ 	background-color: lightblue; 
+}
+
+.container {
+	width: auto;
+	background-color: lightblue;
+	text-align: center;
+}
+
+/* Search area */
+.searchBox {
+	width: auto;
+	text-align: center;
+}
+
+.js-search-form label,
+.js-search-form input,
+.js-search-form button {
+  width: 15%;
+  padding: .2em .5em;
+}
+
+.js-search-form label {
+  padding: 0;
+}
+
+.js-search-form button {
+  color: inherit;
+  background-color: #99ddff;
+  border: 3px solid white;
+  margin-top: .75em;
+}
+
+.js-search-form input:focus,
+.js-search-form button:focus {
+  outline: 5px dotted salmon;
+}
