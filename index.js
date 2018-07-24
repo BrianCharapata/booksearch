@@ -3,7 +3,7 @@
 
 function doOpenLibraryAPI(rtnKey, searchTerm) {
 	let displayName = '';
-	const OPENLIBRARY = 'http://openlibrary.org/search.json';
+	const OPENLIBRARY = 'https://openlibrary.org/search.json';
 	const query = {
 //    q: `${searchTerm}`,
     author: `${searchTerm}`,
