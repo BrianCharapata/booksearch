@@ -1,40 +1,212 @@
-body {
-	padding-top: 50px;
-	text-align: center;
- 	background-color: lightblue; 
-}
-
-.container {
-	width: auto;
-	background-color: lightblue;
-	text-align: center;
-}
-
-/* Search area */
-.searchBox {
-	width: auto;
-	text-align: center;
-}
-
-.js-search-form label,
-.js-search-form input,
-.js-search-form button {
-  width: 15%;
-  padding: .2em .5em;
-}
-
-.js-search-form label {
+/********************************/
+/* Generic Form and Body layout */
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.js-search-form button {
-  color: inherit;
-  background-color: #99ddff;
-  border: 3px solid white;
-  margin-top: .75em;
+body {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  border: 2px solid black;
+  opacity: 0.95;
+  filter: alpha(opacity=90); /* For IE8 and earlier */
+  padding: 25px;
+  background: url(img/library-1752515_1920_result.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
 }
 
-.js-search-form input:focus,
-.js-search-form button:focus {
-  outline: 5px dotted salmon;
+/********************************/
+/* Configurations for top title */
+.topline {
+  text-align: center;
+  padding-top: 10px;
+  background-color: #ffccb3;
+  border-top: solid;
+}
+
+h2 {
+  padding: 10px;
+
+}
+
+div.outside {
+  width: auto;
+  height: 1000px;
+}
+
+/*******************/
+/* help Box layout */
+div.centerText {
+  border-top: solid;
+  border-bottom: solid;
+  height: 110px;
+  width: 50%;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #ffccb3;
+}
+
+/* partOne is help box, partTwo is Author/Title entry*/
+.partOne, .partTwo {
+  margin-bottom: 10px;
+}
+
+.partOne {
+  padding-top: 0px;
+  display: block;
+  font-size: 1.1em;
+}
+
+.partTwo {
+  display: none;
+}
+
+.displayText, .inputText {
+  font-size: 1.2em;
+}
+
+.inputText {
+  height: 30px;
+  width: 284px;
+  text-align: left;
+}
+
+/**********************/
+/* button area layout */
+form {
+  padding-bottom: 10px;
+  height: 65px;
+  background-color: #ffccb3;
+  border-bottom: solid;
+}
+
+.boxLeft {
+  width: 50%;
+  float: left;
+}
+
+#titleChoice {
+  padding-left: 20px;
+}
+
+.boxRight {
+  width: 50%;
+  float: right;
+}
+
+/* Submit left and right select author or title buttons */
+.submitBtnLeft {
+  float: right;
+  margin-right: 5px;
+  margin-left: auto;
+}
+
+.submitBtnRight {
+  float: left;
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+.submitBtnLeft, .submitBtnRight {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: solid;
+  border-radius: 5px;
+  border-width: thin;
+  height: 40px;
+  width: 190px;
+  text-align: center;
+  background-color: #ffa880;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+/*  font-weight: bold; */
+  font-size: 1.1em;
+}
+
+/* submitBtn and resetBtn - submit or reset data entered */
+.submitBtn, .resetBtn {
+  margin-top: 8px;
+  margin-bottom: 3px;
+  border: solid;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: thin;
+  height: 40px;
+  width: 190px;
+  text-align: center;
+  background-color: #ffa880;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  font-size: 1.1em;
+}
+
+.submitBtn {
+  margin-left: 4px;
+  margin-right: auto;
+}
+
+.resetBtn {
+  margin-right: auto;
+  margin-left: 4px;
+}
+
+.allBtns:hover {
+  background-color: #b33c00;
+  color: white;
+}
+
+/*************************/
+/* Heading for data list */
+.dataTitle {
+  border-top: solid;
+  border-bottom: solid;
+  height: 40px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 17px;
+  background-color: #ffccb3;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  display: none;
+  padding: 5px;
+  font-size: 1.2em;
+  text-align: center;
+}
+/***************************************/
+/* Configs for data row and table list */
+.dataDump {
+  background-color: #ffccb3;
+  width: 50%;
+  border-top: solid;
+  border-bottom: solid;
+  display: none;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: auto;
+}
+
+.dataRow, .dataHeading {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+.dataHeading th {
+  border-bottom: solid;
 }

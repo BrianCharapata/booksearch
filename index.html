@@ -1,31 +1,51 @@
 <!DOCTYPE html>
-<html lang='en-US'>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>You Tube Search</title>
-        <script
-          src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous"></script>
-        <link href="index.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-      <main role="main"  aria-live="assertive">
-        <div class="container">
-        <h1>Search YouTube Titles</h1>
-        <form action="#" class="js-search-form" aria-live="assertive">
-          <b><label for="query">Enter Search</label></b><br>
-          <input type="text" name="textBox" id="query" class="js-query" required><br>
-          <button type="submit">Search</button>
-        </form>
-          
-        <h2>Results</h2>
-        <div class="js-search-results">
-
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Book Search</title>
+    <meta name="description" content="Book or title lookup form Open Library">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="outside">
+      <heading>
+        <h1 class="topline">Books and More Books</h1>
+      </heading>
+      <form>
+        <div class='boxLeft'>
+          <div class="submitLeft">
+            <button class="submitBtnLeft allBtns" id="choiceAuthor" type="submit" value="author" autofocus="on">Author</button>
+          </div>
         </div>
+        <div class='boxRight'>
+          <div class="submitRight">
+            <button class="submitBtnRight allBtns" id="choiceTitle" type="submit" value="title">Title</button>
+          </div>
         </div>
-      </main>
-      <script src="index.js"></script>
-    </body>
+      </form>
+      <div class="centerText">
+        <div class='partOne'>
+          <p id='infoBox' class='info'>Click Author or Title to lookup books. <br>The more precise the information <br>the smaller the sample. <br>Example: Heinlen or Robert Heinlein.</p>
+        </div>
+        <div class='partTwo'>
+          <label for='inputField' class="displayText">Enter <span class='listName'</span> Name</label>
+          <input id='inputField' class='inputText' type='text' value="Harry Harrison" autofocus>
+          <button class="submitBtn allBtns" id="enterBtn" type="submit" value="title">Press Enter</button>
+          <button class="resetBtn allBtns" id="resetInputBtn" type="reset" value="reset">Reset</button>
+        </div>
+      </div>    
+      <div class='dataTitle' display='none'>
+        <p class='dataTitleDisplay'></p>
+      </div>
+      <div>
+        
+          <table class='dataDump' display='none'>
+          </table>
+        
+      </div>
+    </div>
+  </body>
 </html>
