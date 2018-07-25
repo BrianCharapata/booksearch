@@ -7,42 +7,58 @@ function doOpenLibraryAPI(rtnKey, searchTerm) {
 	const query = {
 //    q: `${searchTerm}`,
     author: `${searchTerm}`,
-    limit: 10
+    limit: 5
   }
 
 	displayName = 'Searching for: ' + searchTerm;
 	$('.dataTitleDisplay').text(`${displayName}`);
 	$('.dataTitle').css('display', 'block');
 
-	/* Pull json data from the library */
+//	console.log(testOb);
+//	console.log(testOb.data.readyState);
+//	console.log(testOb.readyState);
+//	console.log(testOb.docs[0]);
+
+	// Pull json data from the library
+
 	$.getJSON(OPENLIBRARY, query, function(data,status) {
 		let displayData = '';
 		let lineCount = 0;
-		let numberOfLines = 20;
+		let numberOfLines = 80;
+		let amountFound = data.numFound;
+		let dataHead = '';
 			
 		$('.dataDump').css('display', 'none');
 		console.log(data);
-		console.log(data.docs);
-		console.log("Status: ", status);
-
-		/* If data pull succeeds then display */
+		console.log(data.docs[0]);
+		console.log("Status: " + status);
+		console.log("Number records found: " + amountFound);
+		test = data.docs[0];
+		// If data pull succeeds then display //
 		if( status === 'success') {
-			let dataHead = "<tr class='dataHeading'><th>Titles</th></td>";
+			dataHead = "<p class='dataHeading'>" + 
+				"Books written by: <span class='searchItem'>" + 
+				searchTerm + "<br>Number of books: " + amountFound + "</span></p>";
+	
 			$('.dataDump').append(dataHead);
 
-			/* Build table data list */
+			// Build table data list //
 			data.docs.map(function (item, index) {
-				let data = "<tr class='dataRow'><td>" + item.title + "</td></td>";
+				let data = "<p class='dataRow'>" + item.title + "</p>";
 				$('.dataDump').append(data);
 			});
 
 			$('.dataDump').css('display', 'block');
 		}
+		$('.dataTitleDisplay').text(`${displayName}`);
+		return data.docs;
 	});
 }
 
 /*****************/
 /* Main function */
+
+let test = '';
 
 function bookSearch() {
 
@@ -85,9 +101,11 @@ function bookSearch() {
 	/* Enter button to submit Author or Title search */
 
 	$('#enterBtn').click( function() {
+		$('.dataDump').empty();
 		doOpenLibraryAPI(13,$('#inputField').val());
 		$('#inputField').val('');
 		$("#inputField").focus();
+		console.log("Global: " + test);
 	});
 
 	/********************************************************************/
@@ -95,6 +113,7 @@ function bookSearch() {
 
 	$("#inputField").keydown(function(event){ 
 		if( event.which === 13 ) {
+			$('.dataDump').empty();
 			doOpenLibraryAPI(event.which,$('#inputField').val());
 			$('#inputField').val('');
 			$("#inputField").focus();
@@ -115,6 +134,7 @@ function bookSearch() {
 			$('.dataTitle').css('display', 'none');
 			$('.headingLine').css('display', 'none');
 			$('.dataDump').css('display', 'none');
+			$('.dataDump').empty();
 			$('#choiceAuthor').focus();
 		});
 
