@@ -1,87 +1,178 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Search</title>
-    <meta name="description" content="Book or title lookup form Open Library">
-    <link href="test-grid.css" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="test-grid.js"></script>
-  </head>
-  <body>
+* {
+    box-sizing: border-box;
+}
+body {
+  background: url(img/library-1752515_640_result.jpg);
+/*  background-repeat: repeat-y; */
+/*  background-size: cover;*/
+  background-position: top center;
+}
 
-    <div class="header">
-      <h2>Books and More Books</h2>
-    </div>
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-    <div class="row">
+[class*="col-"] {
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+}
 
-      <div class="col-3 col-s-3 hideAtStart">
-      </div>
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
 
-      <div class="col-3 col-s-3 smallButtonSize groupOneHide groupOneShow">
-        <div class="btnBoxsInner allBtnBoxs">
-          <button class="authorBtn allBtns" id="choiceAuthor" value="author" autofocus>Author</button>
-        </div>
-      </div>
-      <div class="col-3 col-s-3 smallButtonSize groupOneHide groupOneShow">
-        <div class="btnBoxsInner allBtnBoxs">
-          <button class="allBtns" id="choiceTitle" type="submit" value="title">Title</button>
-        </div>
-      </div>
+.header {
+  border-top: solid;
+  border-bottom: solid;
+  background-color: #ffccb3;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
 
-      <div class="col-3 col-s-3 smallButtonSize hideAtStart groupTwoShow groupTwoHide">
-        <div class="btnBoxsInner allBtnBoxs">
-          <button class="submitBtn allBtns" id="enterBtn" type="submit" value="title">Press Enter</button>
-        </div>
-      </div>
-      <div class="col-3 col-s-3 smallButtonSize hideAtStart groupTwoShow groupTwoHide">
-        <div class="btnBoxsInner allBtnBoxs" display="none">
-          <button class="resetBtn allBtns" id="resetInputBtn" type="reset" value="reset">Reset</button>
-        </div>
-      </div>
+.hide {
+height: 0px;
+padding: 0px;
+}
 
-      <div class="col-3 col-s-3 smallButtonSize hideAtStart groupThreeShow groupThreeHide">
-        <div class="btnBoxsInner allBtnBoxs">
-          <button class="submitBtn allBtns" id="nextTenBtn" type="submit" value="nextten">Next 10</button>
-        </div>
-      </div>
-      <div class="col-3 col-s-3 smallButtonSize hideAtStart groupThreeShow groupThreeHide">
-        <div class="btnBoxsInner allBtnBoxs" display="none">
-          <button class="backBtn allBtns" id="backBtn" type="reset" value="back">Back</button>
-        </div>
-      </div>
+button {
+  width: 100%;
+}
 
-      <div class="col-3 col-s-3 inputBox hideAtStart groupTwoShow groupTwoHide">
-          <label for='inputField' class="displayText">Enter Name</label>
-          <input id='inputField' class='inputText' type='text' value="Harry Harrison">
-      </div>
 
-      <div class='col-3 col-s-3 instructBox groupOneShow groupOneHide groupTwoShow groupThreeShow groupThreeHide'><p><b>Select Author or Title</b></p>
-      </div>
 
-      <div class="col-3 col-s-3 hideAtStart">
-      </div>
+.allBtns {
+  border: solid;
+  border-width: thin;
+  border-radius: 10px;
+  padding: 3px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #80bfff;
+  color: black;
+  text-align: center;
+  font-size: 1em;
+}
 
-      <div class="col-4 col-s-12 hideAtStart groupThreeShow groupThreeHide">
-        <div class="aside details">
-          <h3> Book Details</h3>
-        </div>
-      </div>
+.allBtns:hover {
+  border-radius: 10px;
+  border: solid;
+  border-width: thin;
+  background-color: #0059b3;
+  color: #ffffff;
+}
 
-      <div class="col-8 col-s-9 hideAtStart groupThreeShow groupThreeHide">
-        <div class="dataBlock">
-          <h3> Book Title Listing</h3>
-        </div>
-      </div>
+.btnBoxsInner {
+  border-radius: 10px;
+  padding: 3px;
+  margin-top: 2px;
+}
 
-      <div class="col-4 col-s-3 hideAtStart">
-      </div>
+.aside, .allBtnBoxs, .inputBox {
+  border-top: solid;
+  border-bottom: solid;
+  border-width: thin;
+  background-color: #ffccb3;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: black;
+  text-align: center;
+  font-size: 1em;
+}
 
-      <div class="col-2 col-s-3 hideAtStart">
-      </div>
+.inputBox {
+  margin-top: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 
-    </div>
-  </body>
-</html>
+.displayText, .inputText {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-weight: bold;
+}
+
+.dataBlock {
+  border-top: solid;
+  border-bottom: solid;
+  padding: 8px;
+  background-color: #ffccb3;
+  color: black;
+}
+
+.instructBox {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 4px;
+  border-top: solid;
+  border-bottom: solid;
+  background-color: #ffccb3;
+  color: black;
+  text-align: center;
+  font-size: .9em;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+.smallButtonSize {
+  width: 50%;
+}
+
+.hideAtStart {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+body {
+  background: url(img/library-1752515_1920_result.jpg);
+/*  background-repeat: repeat-y; */
+/*  background-size: cover;*/
+/*  background-position: left top; */ 
+}
+
+.dataBlock, .details {
+  min-height: 274px;
+  text-align: center;
+}
+
+.hide {
+min-height: 80px;
+padding: 0px;
+}
