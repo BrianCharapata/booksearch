@@ -3,9 +3,9 @@
 }
 body {
   background: url(img/library-1752515_640_result.jpg);
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-position: center top; 
+/*  background-repeat: repeat-y; */
+/*  background-size: cover;*/
+  background-position: top center;
 }
 
 .row::after {
@@ -43,9 +43,7 @@ button {
   width: 100%;
 }
 
-.setDisplay {
-  display: none;
-}
+
 
 .allBtns {
   border: solid;
@@ -74,20 +72,28 @@ button {
   margin-top: 2px;
 }
 
-.aside, .allBtnBoxs{
+.aside, .allBtnBoxs, .inputBox {
   border-top: solid;
   border-bottom: solid;
   border-width: thin;
   background-color: #ffccb3;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   color: black;
   text-align: center;
   font-size: 1em;
 }
 
+.inputBox {
+  margin-top: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
 .displayText, .inputText {
-  font-size: 1em;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-weight: bold;
 }
 
 .dataBlock {
@@ -156,9 +162,9 @@ button {
 
 body {
   background: url(img/library-1752515_1920_result.jpg);
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-position: left top; 
+/*  background-repeat: repeat-y; */
+/*  background-size: cover;*/
+/*  background-position: left top; */ 
 }
 
 .dataBlock, .details {
