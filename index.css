@@ -2,10 +2,10 @@
     box-sizing: border-box;
 }
 body {
-  background: url(img/library-1752515_640_result.jpg);
+  background: url(img/books-321-568.jpg);
 /*  background-repeat: repeat-y; */
-/*  background-size: cover;*/
-  background-position: top center;
+  background-size: auto;
+/*  background-position: top center;*/
 }
 
 .row::after {
@@ -35,8 +35,8 @@ html {
 }
 
 .hide {
-height: 0px;
-padding: 0px;
+  height: 0px;
+  padding: 0px;
 }
 
 button {
@@ -84,6 +84,10 @@ button {
   font-size: 1em;
 }
 
+.details, .dataBlock {
+  background-color: #b3d9ff;
+}
+
 .inputBox {
   margin-top: 10px;
   padding-top: 4px;
@@ -104,6 +108,24 @@ button {
   color: black;
 }
 
+.dataRow, .dataHeading {
+  background-color: #ffccb3;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+  font-size: .9em;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+}
+
+.dataHeading {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-top: solid;
+  border-bottom: solid;
+}
+
 .instructBox {
   padding-top: 3px;
   padding-bottom: 3px;
@@ -115,6 +137,27 @@ button {
   text-align: center;
   font-size: .9em;
 }
+
+/**********************/
+/* Data window config */
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  float: left;
+}
+
+.sticky  + .content{
+  padding-top: 102px;
+}
+
 
 /* For mobile phones: */
 [class*="col-"] {
@@ -162,9 +205,10 @@ button {
 
 body {
   background: url(img/library-1752515_1920_result.jpg);
-/*  background-repeat: repeat-y; */
+  background-size: auto;
+  background-repeat: no-repeat;
 /*  background-size: cover;*/
-/*  background-position: left top; */ 
+  background-position: center top; 
 }
 
 .dataBlock, .details {
