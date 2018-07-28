@@ -43,19 +43,16 @@ button {
   width: 100%;
 }
 
-
-
 .allBtns {
   border: solid;
   border-width: thin;
   border-radius: 10px;
-  padding: 3px;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #80bfff;
   color: black;
   text-align: center;
-  font-size: 1em;
+  font-size: .9em;
 }
 
 .allBtns:hover {
@@ -67,9 +64,20 @@ button {
 }
 
 .btnBoxsInner {
-  border-radius: 10px;
   padding: 3px;
   margin-top: 2px;
+  border-radius: 10px;
+}
+
+.backInputBtnBox {
+  width: 100%;
+}
+
+.backInputBtn {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: .8em;
+  width: 100%;
 }
 
 .aside, .allBtnBoxs, .inputBox {
@@ -103,27 +111,37 @@ button {
 .dataBlock {
   border-top: solid;
   border-bottom: solid;
-  padding: 8px;
+  padding: 3px;
   background-color: #ffccb3;
   color: black;
 }
 
 .dataRow, .dataHeading {
-  background-color: #ffccb3;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
   text-align: left;
-  font-size: .9em;
   border-bottom: solid;
   border-bottom-width: 1px;
   border-bottom-color: black;
+  font-weight: bold;
+}
+
+.dataRow {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: .8em;  
+  background-color: #80bfff;
 }
 
 .dataHeading {
+  background-color: #ffccb3;
   margin-top: 5px;
   margin-bottom: 5px;
   border-top: solid;
   border-bottom: solid;
+  font-size: .9em;
 }
 
 .instructBox {
@@ -154,7 +172,7 @@ button {
   float: left;
 }
 
-.sticky  + .content{
+.sticky + .content{
   padding-top: 102px;
 }
 
