@@ -39,20 +39,17 @@ html {
   padding: 0px;
 }
 
-button {
-  width: 100%;
-}
-
 .allBtns {
   border: solid;
   border-width: thin;
   border-radius: 10px;
-  padding-top: 15px;
-  padding-bottom: 15px;
   background-color: #80bfff;
   color: black;
   text-align: center;
-  font-size: .9em;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: .8em;
+  width: 100%;
 }
 
 .allBtns:hover {
@@ -74,10 +71,6 @@ button {
 }
 
 .backInputBtn {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-size: .8em;
-  width: 100%;
 }
 
 .aside, .allBtnBoxs, .inputBox {
@@ -181,11 +174,11 @@ button {
 [class*="col-"] {
   width: 100%;
 }
-
+/*
 .smallButtonSize {
   width: 50%;
 }
-
+*/
 .hideAtStart {
   display: none;
 }

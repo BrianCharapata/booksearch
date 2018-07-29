@@ -1,8 +1,3 @@
-let dataObject = {
-	testdata: "slimedog"
-};
-
-
 /* Find if the search is for Author or Title */
 function findSearchType() {
 	let searchType = '';
@@ -61,9 +56,7 @@ function doOpenLibraryAPI(searchType, nameValue) {
 				" books.</p>";
 		}
 
-console.log(dataHead);
-console.log("Test mapped Object: " + dataObject.testdata);
-
+console.log('Search Type: ' + searchType);
 		// If data pull succeeds then display //
 		if( amountFound > 0 && status === 'success') {
 	
@@ -76,16 +69,24 @@ console.log(data);
 			data.docs.map(function (item, index) {
 				let searchType = findSearchType();
 
-				if( searchType === 'Author') {
-					$('.dataBlock').append("<p class='dataRow'>" + item.title + "<br>  ** " + 
-					item.author_name + "</p>");
+				if( searchType === 'Author' ) {
+					$('.dataBlock').append("<p class='dataRow'><span>" + item.title + 
+						"<br>Year Pub: " + item.first_publish_year + "</span></p>");
+				} else if( searchType === 'Title' ) {
+					if( item.author_name ) {
+						$('.dataBlock').append("<p class='dataRow'><span>" + item.title + 
+							"<br>  Author: "  + item.author_name + 
+							"<br>Year Pub: " + item.first_publish_year + "</span></p>");
+					} else {
+						$('.dataBlock').append("<p class='dataRow'><span>" + item.title + 
+							"<br>Year Pub: " + item.first_publish_year + "</span></p>");						
+					}
 				} else {
-					$('.dataBlock').append("<p class='dataRow'>" + item.title + "<br>  ** " + 
-					item.author_name + "</p>");
+					$('.dataBlock').append("<p class='dataRow'>" + item.title + "</p>");					
 				}
 			});
 		} else if( amountFound === 0 ) {
-			$('.dataBlock').append("<p class='dataRow'>'Sorry, Nothing Found'</p>");
+			$('.dataBlock').append("<p class='dataRow'>'Sorry, No entries Found'</p>");
 		} else {
 			$('.dataBlock').append("<p class='dataRow'>'Sorry, Library Database is Busy'</p>");
 		}
