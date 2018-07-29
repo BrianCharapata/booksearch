@@ -1,3 +1,9 @@
+let dataObject = {
+	testdata: "slimedog"
+};
+
+
+/* Find if the search is for Author or Title */
 function findSearchType() {
 	let searchType = '';
 
@@ -34,6 +40,8 @@ function doOpenLibraryAPI(searchType, nameValue) {
   	newQuery = queryAuthor;
   }
 
+
+
 	// Pull json data from Open library
 	$.getJSON(OPENLIBRARY, newQuery, function(data,status) {	
 		let requestType = $('#inputField').val();
@@ -52,7 +60,9 @@ function doOpenLibraryAPI(searchType, nameValue) {
 				"Your " + searchType + " request found: " + amountFound + 
 				" books.</p>";
 		}
-		console.log(dataHead);
+
+console.log(dataHead);
+console.log("Test mapped Object: " + dataObject.testdata);
 
 		// If data pull succeeds then display //
 		if( amountFound > 0 && status === 'success') {
@@ -60,11 +70,19 @@ function doOpenLibraryAPI(searchType, nameValue) {
 			$('.dataBlock').css('display', 'none');
 			$('.dataBlock').append(dataHead);
 
-			console.log(data);
-			
+console.log(data);
+
 			// Build table data list //
 			data.docs.map(function (item, index) {
-				$('.dataBlock').append("<p class='dataRow'>" + item.title + "</p>");
+				let searchType = findSearchType();
+
+				if( searchType === 'Author') {
+					$('.dataBlock').append("<p class='dataRow'>" + item.title + "<br>  ** " + 
+					item.author_name + "</p>");
+				} else {
+					$('.dataBlock').append("<p class='dataRow'>" + item.title + "<br>  ** " + 
+					item.author_name + "</p>");
+				}
 			});
 		} else if( amountFound === 0 ) {
 			$('.dataBlock').append("<p class='dataRow'>'Sorry, Nothing Found'</p>");
@@ -176,8 +194,8 @@ function bookSearch() {
 		}
 	});
 
-	/*************************************************/
-	/* Enter button to submit Author or Title search */
+	/***************************************/
+	/* Back button moves back on menu set  */
 
 	$('#backBtn').click( function() {
 
@@ -204,7 +222,7 @@ function bookSearch() {
 
 		if( event.which === keyPressed && query.length > 1 ) {
 			$(".groupTwoHide").slideUp('fast', function() {
-				$('#inputField').val('');
+//				$('#inputField').val('');
 				dataWin(query);
 			});
 
