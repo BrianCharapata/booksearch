@@ -138,7 +138,7 @@ function bookSearch() {
 	/* Button which sets up a title search */
 
 	$('#choiceTitle').click( function() {
-		let instructText = 'Enter Name of Title';
+		let instructText = 'Enter Title';
 
 		$('#choiceTitle').val('Title');
 		$(".groupOneHide").slideUp('fast',function() {

@@ -34,11 +34,6 @@ html {
   text-align: center;
 }
 
-.hide {
-  height: 0px;
-  padding: 0px;
-}
-
 .allBtns {
   border: solid;
   border-width: thin;
@@ -68,9 +63,6 @@ html {
 
 .backInputBtnBox {
   width: 100%;
-}
-
-.backInputBtn {
 }
 
 .aside, .allBtnBoxs, .inputBox {
@@ -197,6 +189,8 @@ html {
   .col-s-10 {width: 83.33%;}
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
+
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -214,20 +208,56 @@ html {
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 
-body {
-  background: url(img/library-1752515_1920_result.jpg);
-  background-size: auto;
-  background-repeat: no-repeat;
-/*  background-size: cover;*/
-  background-position: center top; 
-}
+  body {
+    background: url(img/library-1752515_1920_result.jpg);
+    background-size: auto;
+    background-repeat: no-repeat repeat-y;
+  /*  background-size: cover;*/
+    background-position: center top; 
+  }
 
-.dataBlock, .details {
-  min-height: 274px;
-  text-align: center;
-}
+  .details {
 
-.hide {
-min-height: 80px;
-padding: 0px;
+  }
+
+  .dataBlock {
+    min-height: 274px;
+  }
+
+  .dataHeading, .dataRow {
+    text-align: center;    
+  }
+
+  .header h2 {
+    font-size: 2em;
+  }
+
+  .allBtns {
+    font-size: 1.4em;
+  }
+
+  .groupOneShow, .btnBoxsInner {
+    min-height: 45px;    
+  }
+
+  .showOne {
+    display: block;
+    min-height: 50px;
+  }
+
+  .displayThree {
+    display: block;
+    min-height: 50px;
+  }
+
+  .instructBox  {
+    font-size: 1em;
+  }
+/*
+  .hideAtStart {
+    display: block;
+    min-height: 80px;
+    padding: 0px;
+  }
+*/
 }
