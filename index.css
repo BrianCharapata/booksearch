@@ -216,8 +216,17 @@ html {
     background-position: center top; 
   }
 
-  .details {
+  .hideAtStart {
+    display: none;
+  }
 
+  .lineTwo {
+    height: 48px;
+  }
+
+  .details {
+    height: 47px;
+    padding: 0px;  
   }
 
   .dataBlock {
@@ -241,23 +250,16 @@ html {
   }
 
   .showOne {
-    display: block;
+/*    display: block;*/
     min-height: 50px;
   }
 
   .displayThree {
-    display: block;
+/*    display: block;*/
     min-height: 50px;
   }
 
   .instructBox  {
     font-size: 1em;
   }
-/*
-  .hideAtStart {
-    display: block;
-    min-height: 80px;
-    padding: 0px;
-  }
-*/
 }

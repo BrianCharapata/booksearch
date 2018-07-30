@@ -60,7 +60,7 @@ console.log('Search Type: ' + searchType);
 		// If data pull succeeds then display //
 		if( amountFound > 0 && status === 'success') {
 	
-			$('.dataBlock').css('display', 'none');
+/*			$('.dataBlock').css('display', 'none'); /******** Display **********/
 			$('.dataBlock').append(dataHead);
 
 console.log(data);
@@ -91,7 +91,7 @@ console.log(data);
 			$('.dataBlock').append("<p class='dataRow'>'Sorry, Library Database is Busy'</p>");
 		}
 
-		$('.dataBlock').css('display', 'block');
+/*		$('.dataBlock').css('display', 'block');   ******** Display **********/
 	});
 }
 
@@ -115,6 +115,9 @@ function dataWin(query) {
   	}
 	}
 }
+
+/*****************************************/
+/* This main function handles all events */
 
 function bookSearch() {
 
@@ -223,7 +226,6 @@ function bookSearch() {
 
 		if( event.which === keyPressed && query.length > 1 ) {
 			$(".groupTwoHide").slideUp('fast', function() {
-//				$('#inputField').val('');
 				dataWin(query);
 			});
 
