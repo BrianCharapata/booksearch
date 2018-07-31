@@ -220,10 +220,19 @@ html {
     display: none;
   }
 
-  .lineTwo {
-    height: 48px;
+  .pageOne {
+    display: block;
+    height: 50px;
   }
 
+  .pageTwo, .pageThree, .pageFour {
+    height: 50px;
+  }
+/*
+  .lineThree {
+    height: 300px;
+  }
+*/
   .details {
     height: 47px;
     padding: 0px;  

@@ -110,6 +110,8 @@ function dataWin(query) {
 	function dataWindow() {
  	 if (window.pageYOffset > sticky) {
   	  header.classList.add("sticky");
+//				$('.pageThree').css('display', 'none');
+//				$('.pageFour').css('display', 'block');
   	} else {
   	  header.classList.remove("sticky");
   	}
@@ -128,13 +130,16 @@ function bookSearch() {
 		let instructText = 'Enter Name of Author';
 
 		$('#choiceAuthor').val('Author');
-		$('.groupOneHide').slideUp('fast',function() {
+		$('.groupOneHide').slideUp('fast', function() {
 			$('.instructBox').text(instructText);
-		});
-
-		$(".groupTwoShow").slideDown('fast',function() {
+			$('.pageOne').css('display', 'none');
+			$('.pageTwo').css('display', 'block');
+		$(".groupTwoShow").slideDown('fast', function() {
 			$("#inputField").focus();
 		});
+		});
+
+
 	});
 
 	/***************************************/
@@ -146,6 +151,8 @@ function bookSearch() {
 		$('#choiceTitle').val('Title');
 		$(".groupOneHide").slideUp('fast',function() {
 			$('.instructBox').text(instructText);
+			$('.pageOne').css('display', 'none');
+			$('.pageTwo').css('display', 'block');
 		});
 
 		$(".groupTwoShow").slideDown('fast',function() {
@@ -167,7 +174,8 @@ function bookSearch() {
 
 		$(".groupTwoHide").slideUp('fast', function() {
 			$('.instructBox').text(instructText);
-			$('.dataBlock').empty();
+			$('.pageTwo').css('display', 'none');
+			$('.pageOne').css('display', 'block');
 		});
 		$(".groupOneShow").slideDown('fast', function() {
 			$("#choiceAuthor").focus();
@@ -187,6 +195,8 @@ function bookSearch() {
 			alert("An Entry is Required");
 		}	else {
 			$(".groupTwoHide").slideUp('fast', function() {
+				$('.pageTwo').css('display', 'none');
+				$('.pageThree').css('display', 'block');
 				dataWin(query);
 			});
 
@@ -207,6 +217,8 @@ function bookSearch() {
 
 		$(".groupThreeHide").slideUp('fast', function() {
 			$('.dataBlock').empty();
+			$('.pageThree').css('display', 'none');
+			$('.pageTwo').css('display', 'block');
 		});
 
 		$(".groupTwoShow").slideDown('fast', function() {
@@ -227,6 +239,8 @@ function bookSearch() {
 		if( event.which === keyPressed && query.length > 1 ) {
 			$(".groupTwoHide").slideUp('fast', function() {
 				dataWin(query);
+				$('.pageTwo').css('display', 'none');
+				$('.pageThree').css('display', 'block');
 			});
 
 			doOpenLibraryAPI( findSearchType(), query );
@@ -235,7 +249,6 @@ function bookSearch() {
 			});
 		}
 	});
-
 }
 
 $(bookSearch);
