@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
   background: url(img/books-321-568.jpg);
 /*  background-repeat: repeat-y; */
@@ -8,11 +9,17 @@ body {
 /*  background-position: top center;*/
 }
 
+.row {
+  margin: auto;
+  width: 100%;
+}
+
 .row::after {
   content: "";
   clear: both;
   display: table;
 }
+
 
 [class*="col-"] {
   float: left;
@@ -25,7 +32,7 @@ html {
   font-family: "Lucida Sans", sans-serif;
 }
 
-.header {
+.header{
   border-top: solid;
   border-bottom: solid;
   background-color: #ffccb3;
@@ -44,15 +51,7 @@ html {
   padding-top: 3px;
   padding-bottom: 3px;
   font-size: .8em;
-  width: 100%;
-}
-
-.allBtns:hover {
-  border-radius: 10px;
-  border: solid;
-  border-width: thin;
-  background-color: #0059b3;
-  color: #ffffff;
+/*  width: 100%;*/
 }
 
 .btnBoxsInner {
@@ -61,32 +60,11 @@ html {
   border-radius: 10px;
 }
 
-.backInputBtnBox {
-  width: 100%;
-}
-
-.aside, .allBtnBoxs, .inputBox {
-  border-top: solid;
-  border-bottom: solid;
-  border-width: thin;
-  background-color: #ffccb3;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  color: black;
-  text-align: center;
-  font-size: 1em;
-}
-
 .details, .dataBlock {
   background-color: #b3d9ff;
 }
 
-.inputBox {
-  margin-top: 10px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
+/**************************************/
 .displayText, .inputText {
   padding-top: 4px;
   padding-bottom: 4px;
@@ -94,11 +72,11 @@ html {
 }
 
 .dataBlock {
-  border-top: solid;
   border-bottom: solid;
   padding: 3px;
   background-color: #ffccb3;
   color: black;
+  padding-top: 0px;
 }
 
 .dataRow, .dataHeading {
@@ -166,11 +144,31 @@ html {
 [class*="col-"] {
   width: 100%;
 }
-/*
-.smallButtonSize {
-  width: 50%;
-}
-*/
+
+  .innerBox {
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    margin: auto;
+    margin-top: 2px;
+    background-color: #ffccb3;
+  }
+
+  button {
+    width: 100%;
+    padding: 4px;
+    margin-top: 3px;
+    margin-left: 2px;
+    margin-bottom: 3px;
+  }
+
+  #backBtn {
+    width: 99%;
+  }
+
 .hideAtStart {
   display: none;
 }
@@ -211,28 +209,56 @@ html {
   body {
     background: url(img/library-1752515_1920_result.jpg);
     background-size: auto;
-    background-repeat: no-repeat repeat-y;
+    background-repeat: repeat-y;
   /*  background-size: cover;*/
     background-position: center top; 
   }
 
-  .hideAtStart {
-    display: none;
+  .outerBox {
+    display: inline-block;
   }
 
-  .pageOne {
-    display: block;
-    height: 50px;
+  .innerBox {
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    padding: 5px;
+    width: 50%;
+    margin: auto;
+    margin-top: 5px;
+    background-color: #ffccb3;
   }
 
-  .pageTwo, .pageThree, .pageFour {
-    height: 50px;
+  button {
+    width: 49%;
+    padding: 4px;
+    margin-top: 3px;
+    margin-left: 2px;
+    margin-bottom: 3px;
   }
-/*
-  .lineThree {
-    height: 300px;
+
+  #backBtn {
+    width: 99%;
   }
-*/
+
+  .allBtns:hover {
+    border-radius: 10px;
+    border: solid;
+    border-width: thin;
+    background-color: #004d99;
+    color: #ffffff;
+  }
+
+.box {
+    width: 25%;
+    background-color: lightblue;
+    float: left;
+}
+
+  .header h2 {
+    font-size: 2em;
+  }
+
   .details {
     height: 47px;
     padding: 0px;  
@@ -244,10 +270,6 @@ html {
 
   .dataHeading, .dataRow {
     text-align: center;    
-  }
-
-  .header h2 {
-    font-size: 2em;
   }
 
   .allBtns {

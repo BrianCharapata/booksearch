@@ -68,18 +68,28 @@ console.log(data);
 			// Build table data list //
 			data.docs.map(function (item, index) {
 				let searchType = findSearchType();
+				let contributor = '';
+
+				if( !item.contributor ) {
+					contributor = 'None';
+				} else {
+					contributor = item.contributor;
+				}
 
 				if( searchType === 'Author' ) {
-					$('.dataBlock').append("<p class='dataRow'><span>" + item.title + 
-						"<br>Year Pub: " + item.first_publish_year + "</span></p>");
+					$('.dataBlock').append("<p class='dataRow'><span>" + 
+						"Author: "  + item.author_name + "<br>Title: " + item.title + 
+						"<br>Year Pub: " + item.first_publish_year + 
+						"<br>Contributor: " + contributor + "</span></p>");
 				} else if( searchType === 'Title' ) {
 					if( item.author_name ) {
-						$('.dataBlock').append("<p class='dataRow'><span>" + item.title + 
-							"<br>  Author: "  + item.author_name + 
+						$('.dataBlock').append("<p class='dataRow'><span>" + 
+							"Author: "  + item.author_name + "<br>Title: " + item.title + 
 							"<br>Year Pub: " + item.first_publish_year + "</span></p>");
 					} else {
-						$('.dataBlock').append("<p class='dataRow'><span>" + item.title + 
-							"<br>Year Pub: " + item.first_publish_year + "</span></p>");						
+						$('.dataBlock').append("<p class='dataRow'><span>Title: " + 
+							item.title + "<br>Year Pub: " + item.first_publish_year +
+							"</span></p>");						
 					}
 				} else {
 					$('.dataBlock').append("<p class='dataRow'>" + item.title + "</p>");					
@@ -130,11 +140,11 @@ function bookSearch() {
 		let instructText = 'Enter Name of Author';
 
 		$('#choiceAuthor').val('Author');
-		$('.groupOneHide').slideUp('fast', function() {
+		$('.one').slideUp('fast', function() {
 			$('.instructBox').text(instructText);
 			$('.pageOne').css('display', 'none');
 			$('.pageTwo').css('display', 'block');
-		$(".groupTwoShow").slideDown('fast', function() {
+		$(".two").slideDown( function() {
 			$("#inputField").focus();
 		});
 		});
@@ -149,13 +159,13 @@ function bookSearch() {
 		let instructText = 'Enter Title';
 
 		$('#choiceTitle').val('Title');
-		$(".groupOneHide").slideUp('fast',function() {
+		$(".one").slideUp('fast',function() {
 			$('.instructBox').text(instructText);
 			$('.pageOne').css('display', 'none');
 			$('.pageTwo').css('display', 'block');
 		});
 
-		$(".groupTwoShow").slideDown('fast',function() {
+		$(".two").slideDown( function() {
 			$("#inputField").focus();			
 		});
 	});
@@ -172,12 +182,12 @@ function bookSearch() {
 		$('#choiceTitle').val('');
 		$('#inputField').val('');
 
-		$(".groupTwoHide").slideUp('fast', function() {
+		$(".two").slideUp('fast', function() {
 			$('.instructBox').text(instructText);
 			$('.pageTwo').css('display', 'none');
 			$('.pageOne').css('display', 'block');
 		});
-		$(".groupOneShow").slideDown('fast', function() {
+		$(".one").slideDown( function() {
 			$("#choiceAuthor").focus();
 		});
 	});
@@ -194,7 +204,7 @@ function bookSearch() {
 		if(query === '') {
 			alert("An Entry is Required");
 		}	else {
-			$(".groupTwoHide").slideUp('fast', function() {
+			$(".two").slideUp('fast', function() {
 				$('.pageTwo').css('display', 'none');
 				$('.pageThree').css('display', 'block');
 				dataWin(query);
@@ -202,8 +212,8 @@ function bookSearch() {
 
 			doOpenLibraryAPI( findSearchType(), query );
 
-			$(".groupThreeShow").slideDown('fast', function() {
-				$('#nextTenBtn').focus();
+			$(".three").slideDown(function() {
+				$('#backBtn').focus();
 			});
 		}
 	});
@@ -215,13 +225,13 @@ function bookSearch() {
 
 		$('#inputField').val('');
 
-		$(".groupThreeHide").slideUp('fast', function() {
+		$(".three").slideUp('fast', function() {
 			$('.dataBlock').empty();
 			$('.pageThree').css('display', 'none');
 			$('.pageTwo').css('display', 'block');
 		});
 
-		$(".groupTwoShow").slideDown('fast', function() {
+		$(".two").slideDown(function() {
 			$("#inputField").focus();
 		});
 
@@ -237,15 +247,15 @@ function bookSearch() {
 		query = $('#inputField').val();
 
 		if( event.which === keyPressed && query.length > 1 ) {
-			$(".groupTwoHide").slideUp('fast', function() {
+			$(".two").slideUp(function() {
 				dataWin(query);
-				$('.pageTwo').css('display', 'none');
-				$('.pageThree').css('display', 'block');
+				$('.two').css('display', 'none');
+				$('.three').css('display', 'block');
 			});
 
 			doOpenLibraryAPI( findSearchType(), query );
 
-			$(".groupThreeShow").slideDown('fast', function() {
+			$(".three").slideDown(function() {
 			});
 		}
 	});

@@ -16,78 +16,48 @@
     </div>
 
     <div class="row">
-
-      <div class="col-3 col-s-3 hideAtStart pageOne pageTwo pageThree">
-      </div>
-
-      <div class="col-3 col-s-3 smallButtonSize groupOneHide groupOneShow">
-        <div class="btnBoxsInner allBtnBoxs">
-          <button class="authorBtn allBtns" id="choiceAuthor" value="" autofocus>Author</button>
-        </div>
-      </div>
-      <div class="col-3 col-s-3 smallButtonSize groupOneHide groupOneShow">
-        <div class="btnBoxsInner allBtnBoxs">
+      <div class="col-12 col-s-3 outerBox">
+        <div class="innerBox one">
+          <button class="allBtns" id="choiceAuthor" value="" autofocus>Author</button>
           <button class="allBtns" id="choiceTitle" type="submit" value="">Title</button>
         </div>
       </div>
 
-      <div class="col-3 col-s-3 smallButtonSize hideAtStart groupTwoShow groupTwoHide">
-        <div class="btnBoxsInner allBtnBoxs">
+      <div class="col-12 col-s-3 outerBox">
+        <div class="innerBox two hideAtStart">
           <button class="submitBtn allBtns" id="enterBtn" type="submit" value="title">Press Enter</button>
-        </div>
-      </div>
-      <div class="col-3 col-s-3 smallButtonSize hideAtStart groupTwoShow groupTwoHide">
-        <div class="btnBoxsInner allBtnBoxs" display="none">
           <button class="resetBtn allBtns" id="resetInputBtn" type="reset" value="reset">Back</button>
         </div>
       </div>
 
-      <div class="col-6 col-s-3 hideAtStart groupThreeShow groupThreeHide">
-        <div class="btnBoxsInner allBtnBoxs backInputBtnBox" display="none">
+      <div class="col-12 col-s-3 outerBox">
+        <div class="innerBox three hideAtStart">
           <button class="allBtns" id="backBtn" type="reset" value="back">Back</button>
         </div>
       </div>
 
-      <div class="col-3 col-s-3 hideAtStart pageTwo">
-      </div>
-
-      <div class="col-3 col-s-3 hideAtStart pageTwo">
-      </div>
-
-      <div class="col-6 col-s-3 inputBox hideAtStart groupTwoShow groupTwoHide">
+      <div class="col-12 col-s-3 outerBox">
+        <div class="innerBox two hideAtStart">
           <label for='inputField' class="displayText">Enter Name</label>
           <input id='inputField' class='inputText' type='text' required autofocus autocomplete='on'>
-      </div>
-
-      <div class="col-3 col-s-3 hideAtStart pageOne">
-      </div>
-
-      <div class="col-3 col-s-3 hideAtStart pageOne pageTwo pageThree">
-      </div>
-
-      <div class="col-3 col-s-3 hideAtStart pageTwo pageThree">
-      </div>
-
-      <div class='col-6 col-s-3 instructBox groupOneShow groupOneHide groupTwoShow groupTwoHide'><p><b>Select Author or Title</b></p>
-      </div>
-
-      <div id="bookDetails" class="col-6 col-s-12 hideAtStart groupThreeShow groupThreeHide lineTwo">
-        <div class="aside details">
-          <p class='inputValue'></p>
         </div>
       </div>
 
-      <div class="col-3 col-s-3 hideAtStart pageThree">
+      <div class="col-12 col-s-3 outerBox">
+        <div class="innerBox one">
+          <p><b>Select Author or Title</b></p>
+        </div>
       </div>
 
-      <div class="col-3 col-s-3 hideAtStart pageThree">
+      <div id="bookDetails" class="col-12 col-s-12">
+        <div class="innerBox three hideAtStart">
+          <p class='inputValue'></p>
+        </div>
       </div>
-
-      <div class="col-3 col-s-3 hideAtStart pageFour">
-      </div>
-
-      <div class="col-6 col-s-9 hideAtStart groupThreeShow groupThreeHide">
-        <div class="dataBlock"></div>
+      <div class="col-12 col-s-9">
+        <div class="innerBox three hideAtStart"> 
+          <div class="dataBlock"></div>
+        </div>
       </div>
     </div>
   </body>
