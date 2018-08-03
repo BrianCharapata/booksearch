@@ -56,11 +56,9 @@ function doOpenLibraryAPI(searchType, nameValue) {
 				" books.</p>";
 		}
 
-console.log('Search Type: ' + searchType);
 		// If data pull succeeds then display //
 		if( amountFound > 0 && status === 'success') {
 	
-/*			$('.dataBlock').css('display', 'none'); /******** Display **********/
 			$('.dataBlock').append(dataHead);
 
 console.log(data);
@@ -100,8 +98,6 @@ console.log(data);
 		} else {
 			$('.dataBlock').append("<p class='dataRow'>'Sorry, Library Database is Busy'</p>");
 		}
-
-/*		$('.dataBlock').css('display', 'block');   ******** Display **********/
 	});
 }
 

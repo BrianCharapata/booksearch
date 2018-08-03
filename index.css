@@ -4,9 +4,7 @@
 
 body {
   background: url(img/books-321-568.jpg);
-/*  background-repeat: repeat-y; */
   background-size: auto;
-/*  background-position: top center;*/
 }
 
 .row {
@@ -32,7 +30,7 @@ html {
   font-family: "Lucida Sans", sans-serif;
 }
 
-.header{
+.header {
   border-top: solid;
   border-bottom: solid;
   background-color: #ffccb3;
@@ -54,13 +52,7 @@ html {
 /*  width: 100%;*/
 }
 
-.btnBoxsInner {
-  padding: 3px;
-  margin-top: 2px;
-  border-radius: 10px;
-}
-
-.details, .dataBlock {
+.dataBlock {
   background-color: #b3d9ff;
 }
 
@@ -121,12 +113,6 @@ html {
 
 /**********************/
 /* Data window config */
-.top-container {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-}
-
 .sticky {
   position: fixed;
   top: 0;
@@ -145,29 +131,29 @@ html {
   width: 100%;
 }
 
-  .innerBox {
-    border-top: solid;
-    border-bottom: solid;
-    border-width: 1px;
-    text-align: center;
-    padding: 5px;
-    width: 100%;
-    margin: auto;
-    margin-top: 2px;
-    background-color: #ffccb3;
-  }
+.innerBox {
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  margin: auto;
+  margin-top: 2px;
+  background-color: #ffccb3;
+}
 
-  button {
-    width: 100%;
-    padding: 4px;
-    margin-top: 3px;
-    margin-left: 2px;
-    margin-bottom: 3px;
-  }
+button {
+  width: 100%;
+  padding: 4px;
+  margin-top: 3px;
+  margin-left: 2px;
+  margin-bottom: 3px;
+}
 
-  #backBtn {
-    width: 99%;
-  }
+#backBtn {
+  width: 99%;
+}
 
 .hideAtStart {
   display: none;
@@ -259,11 +245,6 @@ html {
     font-size: 2em;
   }
 
-  .details {
-    height: 47px;
-    padding: 0px;  
-  }
-
   .dataBlock {
     min-height: 274px;
   }
@@ -276,7 +257,7 @@ html {
     font-size: 1.4em;
   }
 
-  .groupOneShow, .btnBoxsInner {
+  .groupOneShow {
     min-height: 45px;    
   }
 
