@@ -60,7 +60,12 @@ html {
 .displayText, .inputText {
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 2px;
   font-weight: bold;
+}
+
+.inputText {
+  size: 30;
 }
 
 .dataBlock {

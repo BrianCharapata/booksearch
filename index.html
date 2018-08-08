@@ -1,64 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
     <title>Book Search</title>
     <meta name="description" content="Book or title lookup form Open Library">
+    <link rel=“icon” href=“favicon.ico” type=“image/x-icon” />    
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="index.js"></script>
   </head>
   <body>
 
-    <div class="header">
+    <header role="banner" class="header">
       <h2>Books and More Books</h2>
-    </div>
+    </header>
+    <main role="main">
+      <div class="row">
+        <div class="col-12 col-s-3 outerBox">
+          <div class="innerBox one">
+            <button class="allBtns" id="choiceAuthor" value="" autofocus>Author</button>
+            <button class="allBtns" id="choiceTitle" type="submit" value="">Title</button>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-12 col-s-3 outerBox">
-        <div class="innerBox one">
-          <button class="allBtns" id="choiceAuthor" value="" autofocus>Author</button>
-          <button class="allBtns" id="choiceTitle" type="submit" value="">Title</button>
+        <div class="col-12 col-s-3 outerBox">
+          <div class="innerBox two hideAtStart">
+            <button class="submitBtn allBtns" id="enterBtn" type="submit" value="title"> Press Enter</button>
+            <button class="resetBtn allBtns" id="resetInputBtn" type="reset" value="reset">Back</button>
+          </div>
         </div>
-      </div>
 
-      <div class="col-12 col-s-3 outerBox">
-        <div class="innerBox two hideAtStart">
-          <button class="submitBtn allBtns" id="enterBtn" type="submit" value="title">Press Enter</button>
-          <button class="resetBtn allBtns" id="resetInputBtn" type="reset" value="reset">Back</button>
+        <div class="col-12 col-s-3 outerBox">
+          <div class="innerBox three hideAtStart">
+            <button class="allBtns" id="backBtn" type="reset" value="back">Back</button>
+          </div>
         </div>
-      </div>
 
-      <div class="col-12 col-s-3 outerBox">
-        <div class="innerBox three hideAtStart">
-          <button class="allBtns" id="backBtn" type="reset" value="back">Back</button>
+        <div class="col-12 col-s-3 outerBox">
+          <div class="innerBox two hideAtStart">
+            <label for='inputField' class="displayText">Enter Name</label>
+            <input id='inputField' class='inputText' type='text' required autofocus autocomplete='on'>
+          </div>
         </div>
-      </div>
 
-      <div class="col-12 col-s-3 outerBox">
-        <div class="innerBox two hideAtStart">
-          <label for='inputField' class="displayText">Enter Name</label>
-          <input id='inputField' class='inputText' type='text' required autofocus autocomplete='on'>
+        <div class="col-12 col-s-3 outerBox">
+          <div class="innerBox one">
+            <p><b>Select Author or Title<br>
+              <small>Select Author to find all books related to an Author.<br>
+              Select Title to find any books related to the group of characters entered.</small></b></p>
+          </div>
         </div>
-      </div>
 
-      <div class="col-12 col-s-3 outerBox">
-        <div class="innerBox one">
-          <p><b>Select Author or Title</b></p>
+        <div id="bookDetails" class="col-12 col-s-12">
+          <div class="innerBox three hideAtStart">
+            <p class='inputValue'></p>
+          </div>
         </div>
-      </div>
 
-      <div id="bookDetails" class="col-12 col-s-12">
-        <div class="innerBox three hideAtStart">
-          <p class='inputValue'></p>
+        <div class="col-12 col-s-9">
+          <div class="innerBox three hideAtStart"> 
+            <div class="dataBlock"></div>
+          </div>
         </div>
       </div>
-      <div class="col-12 col-s-9">
-        <div class="innerBox three hideAtStart"> 
-          <div class="dataBlock"></div>
-        </div>
-      </div>
-    </div>
+    </main>
   </body>
 </html>

@@ -252,6 +252,7 @@ function bookSearch() {
 			doOpenLibraryAPI( findSearchType(), query );
 
 			$(".three").slideDown(function() {
+				$("#backBtn").focus();
 			});
 		}
 	});
