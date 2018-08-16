@@ -29,11 +29,11 @@ function doOpenLibraryAPI(searchType, nameValue) {
   		limit: 200
  	}
 
-  if( searchType === 'Title' ) {
-  	newQuery = queryTitle;
-  } else {
-  	newQuery = queryAuthor;
-  }
+	if( searchType === 'Title' ) {
+  		newQuery = queryTitle;
+	} else {
+  		newQuery = queryAuthor;
+	}
 
 
 
@@ -61,7 +61,7 @@ function doOpenLibraryAPI(searchType, nameValue) {
 	
 			$('.dataBlock').append(dataHead);
 
-console.log(data);
+ console.log(data);
 
 			// Build table data list //
 			data.docs.map(function (item, index) {
