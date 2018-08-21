@@ -5,6 +5,8 @@
 body {
   background: url(img/books-321-568.jpg);
   background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #f2d9d9;
 }
 
 .row {
@@ -43,7 +45,7 @@ html {
   border: solid;
   border-width: thin;
   border-radius: 10px;
-  background-color: #80bfff;
+  background-color: #a6b398;
   color: black;
   text-align: center;
   padding-top: 3px;
@@ -91,8 +93,9 @@ html {
   margin-bottom: 2px;
   padding-top: 3px;
   padding-bottom: 3px;
-  font-size: .8em;  
-  background-color: #80bfff;
+  font-size: .9em;  
+/*  background-color: #80bfff;*/
+  background-color: #a6b398;
 }
 
 .dataHeading {
@@ -198,11 +201,13 @@ button {
   .col-12 {width: 100%;}
 
   body {
-    background: url(img/library-1752515_1920_result.jpg);
-    background-size: auto;
-    background-repeat: repeat-y;
+/*    background: url(img/library-1752515_1920_result.jpg); */
+    background: url(img/FadedLibraryImage_result.jpg);
+  /*  background-size: auto;*/
+    background-repeat: no-repeat;
   /*  background-size: cover;*/
     background-position: center top; 
+    background-color: #f2d9d9;
   }
 
   .outerBox {
@@ -232,11 +237,26 @@ button {
     width: 99%;
   }
 
+  .allBtns {
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    -o-transition-property: background;
+    transition-property: background;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+
   .allBtns:hover {
     border-radius: 10px;
     border: solid;
     border-width: thin;
-    background-color: #004d99;
+    background-color: #6600cc;
     color: #ffffff;
   }
 
@@ -266,16 +286,15 @@ button {
     min-height: 45px;    
   }
 
-  .showOne {
-/*    display: block;*/
+  .showOne, .displayThree {
     min-height: 50px;
   }
 
+/*
   .displayThree {
-/*    display: block;*/
     min-height: 50px;
   }
-
+*/
   .instructBox  {
     font-size: 1em;
   }
