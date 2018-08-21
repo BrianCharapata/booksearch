@@ -51,7 +51,6 @@ html {
   padding-top: 3px;
   padding-bottom: 3px;
   font-size: .8em;
-/*  width: 100%;*/
 }
 
 .dataBlock {
@@ -94,7 +93,6 @@ html {
   padding-top: 3px;
   padding-bottom: 3px;
   font-size: .9em;  
-/*  background-color: #80bfff;*/
   background-color: #a6b398;
 }
 
@@ -201,11 +199,8 @@ button {
   .col-12 {width: 100%;}
 
   body {
-/*    background: url(img/library-1752515_1920_result.jpg); */
     background: url(img/FadedLibraryImage_result.jpg);
-  /*  background-size: auto;*/
     background-repeat: no-repeat;
-  /*  background-size: cover;*/
     background-position: center top; 
     background-color: #f2d9d9;
   }
@@ -260,11 +255,11 @@ button {
     color: #ffffff;
   }
 
-.box {
+  .box {
     width: 25%;
     background-color: lightblue;
     float: left;
-}
+  }
 
   .header h2 {
     font-size: 2em;
@@ -290,11 +285,6 @@ button {
     min-height: 50px;
   }
 
-/*
-  .displayThree {
-    min-height: 50px;
-  }
-*/
   .instructBox  {
     font-size: 1em;
   }

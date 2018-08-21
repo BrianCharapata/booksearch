@@ -1,4 +1,6 @@
+/*********************************************/
 /* Find if the search is for Author or Title */
+
 function findSearchType() {
 	let searchType = '';
 
@@ -116,8 +118,6 @@ function dataWin(query) {
 	function dataWindow() {
  	 if (window.pageYOffset > sticky) {
   	  header.classList.add("sticky");
-//				$('.pageThree').css('display', 'none');
-//				$('.pageFour').css('display', 'block');
   	} else {
   	  header.classList.remove("sticky");
   	}
@@ -169,7 +169,7 @@ function bookSearch() {
 
 	/********************************************/
 	/* Event reset button. Close everything and */
-	/* go back to first page */
+	/* go back to first page                    */
 
 	$('#resetInputBtn').click( function() {
 		let instructText = 'Select Author or Title';
