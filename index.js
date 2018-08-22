@@ -21,6 +21,7 @@ function doOpenLibraryAPI(searchType, nameValue) {
 	let displayName = '';
 	nameValue = '"' + nameValue + '"';
 	const OPENLIBRARY = 'https://openlibrary.org/search.json';
+
 	const	queryAuthor = {
     	author: `${nameValue}`,
     	limit: 200
@@ -63,7 +64,8 @@ function doOpenLibraryAPI(searchType, nameValue) {
 	
 			$('.dataBlock').append(dataHead);
 
- console.log(data);
+			// Left this console.log for future upgrades
+  		// console.log(data);
 
 			// Build table data list //
 			data.docs.map(function (item, index) {
