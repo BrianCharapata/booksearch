@@ -24,12 +24,12 @@ function doOpenLibraryAPI(searchType, nameValue) {
 
 	const	queryAuthor = {
     	author: `${nameValue}`,
-    	limit: 200
+    	limit: 300
  	}
 
 	const queryTitle = {
   		title: `${nameValue}`,
-  		limit: 200
+  		limit: 300
  	}
 
 	if( searchType === 'Title' ) {
@@ -65,12 +65,13 @@ function doOpenLibraryAPI(searchType, nameValue) {
 			$('.dataBlock').append(dataHead);
 
 			// Left this console.log for future upgrades
-  		// console.log(data);
+  		 console.log(data);
 
 			// Build table data list //
 			data.docs.map(function (item, index) {
 				let searchType = findSearchType();
 				let contributor = '';
+				let first_publish_year = '';
 
 				if( !item.contributor ) {
 					contributor = 'None';
@@ -78,19 +79,25 @@ function doOpenLibraryAPI(searchType, nameValue) {
 					contributor = item.contributor;
 				}
 
+				if( !item.first_publish_year ) {
+					first_publish_year = 'Unknown';
+				} else {
+					first_publish_year = item.first_publish_year;
+				}
+
 				if( searchType === 'Author' ) {
 					$('.dataBlock').append("<p class='dataRow'><span>" + 
 						"Author: "  + item.author_name + "<br>Title: " + item.title + 
-						"<br>Year Pub: " + item.first_publish_year + 
+						"<br>Year Pub: " + first_publish_year + 
 						"<br>Contributor: " + contributor + "</span></p>");
 				} else if( searchType === 'Title' ) {
 					if( item.author_name ) {
 						$('.dataBlock').append("<p class='dataRow'><span>" + 
 							"Author: "  + item.author_name + "<br>Title: " + item.title + 
-							"<br>Year Pub: " + item.first_publish_year + "</span></p>");
+							"<br>Year Pub: " + first_publish_year + "</span></p>");
 					} else {
 						$('.dataBlock').append("<p class='dataRow'><span>Title: " + 
-							item.title + "<br>Year Pub: " + item.first_publish_year +
+							item.title + "<br>Year Pub: " + first_publish_year +
 							"</span></p>");						
 					}
 				} else {
