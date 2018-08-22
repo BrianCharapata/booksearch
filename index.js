@@ -149,9 +149,10 @@ function bookSearch() {
 			$('.instructBox').text(instructText);
 			$('.pageOne').css('display', 'none');
 			$('.pageTwo').css('display', 'block');
-		$(".two").slideDown( function() {
-			$("#inputField").focus();
-		});
+
+			$(".two").slideDown( function() {
+				$("#inputField").focus();
+			});
 		});
 
 
