@@ -24,9 +24,12 @@ the title you wish to search.  The title listing will give you all books
 that have your search criteria.  The listing will list the author of each
 book and other important data about each book.
 
-## The applications Technical listing
+## The Technical listing
 + Javascript
 + CCS
 + HTML
 + Accessing a JSON database 'Open Library'
 
+## Possible Future Additions to Program
++ Add a second JSON database which will display possible book purchases.
++ Display small graphic of each book listed.
