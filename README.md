@@ -18,7 +18,7 @@ The Book Search application can be used to search by author or Title of a book.
 When searching by Author you will select the 'Author' button then enter the
 name of an author you wish to look up.  Your search by author will give you 
 a listing of every book, which is known to the Open Library database, that
-author has published.
+the author has published.
 
 When searching by Title.  You will select the 'Title' button and then enter
 the title you wish to search.  The title listing will give you all books 
