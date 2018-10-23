@@ -58,7 +58,7 @@ html {
 }
 
 /**************************************/
-.displayText, .inputText {
+.instructBox, .inputText {
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 2px;
@@ -109,8 +109,6 @@ html {
   padding-top: 3px;
   padding-bottom: 3px;
   margin-top: 4px;
-  border-top: solid;
-  border-bottom: solid;
   background-color: #ffccb3;
   color: black;
   text-align: center;

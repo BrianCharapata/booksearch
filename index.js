@@ -142,7 +142,7 @@ function bookSearch() {
 	/* Button which sets up an author search */
 
 	$('#choiceAuthor').click( function() {
-		let instructText = 'Enter Name of Author';
+		let instructText = 'Enter Author';
 
 		$('#choiceAuthor').val('Author');
 		$('.one').slideUp('fast', function() {
