@@ -21,7 +21,7 @@ a listing of every book, which is known to the Open Library database, that
 the author has published.
 
 When searching by Title.  You will select the 'Title' button and then enter
-the title you wish to search.  The title listing will give you all books 
+the title you wish to search.  The title listing will give you all books
 that have your search criteria.  The listing will list the author of each
 book and other important data about each book.
 
